@@ -1,0 +1,308 @@
+Last login: Thu Sep  5 22:37:12 on ttys000
+Macintosh-3:~ mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:~ mac$ cd Desktop/
+Macintosh-3:Desktop mac$ mkdir Story
+Macintosh-3:Desktop mac$ touch Chapter1.txt
+Macintosh-3:Desktop mac$ open Chap clear
+The files /Users/mac/Desktop/Chap and /Users/mac/Desktop/clear do not exist.
+Macintosh-3:Desktop mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:Desktop mac$ cd Desktop/
+-bash: cd: Desktop/: No such file or directory
+Macintosh-3:Desktop mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:Desktop mac$ cd Desktop
+-bash: cd: Desktop: No such file or directory
+Macintosh-3:Desktop mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:Desktop mac$ cd ..
+Macintosh-3:~ mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:~ mac$ cd Desktop/
+Macintosh-3:Desktop mac$ mkdir Story
+Macintosh-3:Desktop mac$ touch Chapter1.txt
+Macintosh-3:Desktop mac$ cd Story clear
+-bash: cd: Story: No such file or directory
+Macintosh-3:Desktop mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:Desktop mac$ cd ..
+Macintosh-3:~ mac$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Macintosh-3:~ mac$ cd Desktop/
+Macintosh-3:Desktop mac$ mkdir Story
+Macintosh-3:Desktop mac$ cd Story
+Macintosh-3:Story mac$ touch Chapter1.txt
+Macintosh-3:Story mac$ open CHapter1.txt
+Macintosh-3:Story mac$ git init
+Initialized empty Git repository in /Users/mac/Desktop/Story/.git/
+Macintosh-3:Story mac$ ls -a
+.		..		.git		Chapter1.txt
+Macintosh-3:Story mac$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Macintosh-3:Story mac$ git add Chapter1.txt
+Macintosh-3:Story mac$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   Chapter1.txt
+
+Macintosh-3:Story mac$ git commit -m "Complete chapter 1"
+[master (root-commit) 7c1e79f] Complete chapter 1
+ Committer: Thao Linh <mac@Macintosh-3.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Chapter1.txt
+Macintosh-3:Story mac$ 
+Macintosh-3:Story mac$ git log
+commit 7c1e79fef45d168b4b74432978920929472332bf (HEAD -> master)
+Author: Thao Linh <mac@Macintosh-3.local>
+Date:   Fri Sep 6 01:44:03 2019 +1000
+
+    Complete chapter 1
+Macintosh-3:Story mac$ touch chapter2.txt
+Macintosh-3:Story mac$ open chapter2.txt
+Macintosh-3:Story mac$ touch chapter3.txt
+Macintosh-3:Story mac$ open chapter3.txt
+Macintosh-3:Story mac$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+Macintosh-3:Story mac$ git add .
+Macintosh-3:Story mac$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   chapter2.txt
+	new file:   chapter3.txt
+
+Macintosh-3:Story mac$ git commit -m "Complete chapter 2 and 3"
+[master 6fca5df] Complete chapter 2 and 3
+ Committer: Thao Linh <mac@Macintosh-3.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+Macintosh-3:Story mac$ git log
+commit 6fca5dfb3b062c32e186d5c63abb3c4d67ccd492 (HEAD -> master)
+Author: Thao Linh <mac@Macintosh-3.local>
+Date:   Fri Sep 6 01:48:04 2019 +1000
+
+    Complete chapter 2 and 3
+
+commit 7c1e79fef45d168b4b74432978920929472332bf
+Author: Thao Linh <mac@Macintosh-3.local>
+Date:   Fri Sep 6 01:44:03 2019 +1000
+
+    Complete chapter 1
+Macintosh-3:Story mac$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Macintosh-3:Story mac$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 2d2b2c2..9bb3bfd 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-It's ok to do nothing sometimes
+\ No newline at end of file
++lskflsdknvsnvawsd
+\ No newline at end of file
+Macintosh-3:Story mac$ git checkout chapter3.txt
+Updated 1 path from the index
+Macintosh-3:Story mac$ git remote add origin https://github.com/Linhlihn/Book.git
+Macintosh-3:Story mac$ git push -u origin master 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 608 bytes | 304.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/Linhlihn/Book.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Macintosh-3:Story mac$ 
